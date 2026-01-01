@@ -24,6 +24,7 @@ myenv\Scripts\Activate.ps1
 pip install -r requirements.txt
 ```
 
+
 ### Setting up API Keys
 
 1. Create an account in Google Cloud https://cloud.google.com/?hl=en
