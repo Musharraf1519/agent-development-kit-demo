@@ -1,7 +1,5 @@
 # Agent Development KIT (ADK) Course
-
 ## Getting Started
-
 ### Setup Environment
 
 You only need to create one virtual environment for all examples in this course.  
@@ -53,3 +51,4 @@ my_agent/
     __init__.py
 
 ```
+YOu can also create the above folder structure manually or using CMD.
