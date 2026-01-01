@@ -33,6 +33,7 @@ pip install -r requirements.txt
 3. Go to https://aistudio.google.com/apikey
 4. Create an API key
 5. Assign key to the project
+6. Connect to a billing account
 
 
 ### Create an agent project
@@ -52,5 +53,3 @@ my_agent/
     __init__.py
 
 ```
-
-Connect to a billing account
