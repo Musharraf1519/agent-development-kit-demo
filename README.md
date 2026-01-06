@@ -2,7 +2,7 @@
 ## Getting Started
 ### Setup Environment
 
-You only need to create one virtual environment for all examples in this course.  
+You only need to create one virtual environment for all examples in this Demo.  
 Follow below steps to set it up:
 
 ```bash
@@ -45,7 +45,7 @@ my_agent/
 
 ### Setting up API Keys
 
-Most projectsin this repo uses the Gemini API, which requires an API key. If you don't already have Gemini API key, create a key in Google AI Studio on the API Keys page.
+Most projects in this repo uses the Gemini API, which requires an API key. If you don't already have Gemini API key, create a key in Google AI Studio on the API Keys page.
 
 1. Create an account in Google Cloud https://cloud.google.com/?hl=en
 2. Create a new Project
@@ -55,12 +55,40 @@ Most projectsin this repo uses the Gemini API, which requires an API key. If you
 6. Connect to a billing account
 
 
+
 In a terminal window, write your API key into an .env file as an environment variable:
 ```bash
 echo 'GOOGLE_API_KEY="YOUR_API_KEY"' > .env
 ```
 
 OR you can manually update the GOOGLE_API_KEY with your API Key in the .env file
+
+
+## Setting up API Keys for Non-Gemini Models
+
+ADK also supports non-Google models such as OpenAI, Anthropic, Azure OpenAI, and others. These models are integrated using **wrapper classes**, which allow compatibility with different APIs, gateways, and client configurations.
+
+### Wrapper Classes
+
+Wrapper classes are required when using models outside the Gemini ecosystem or when special routing/configuration is needed (for example, Apigee or LiteLLM).
+
+Instead of passing a model name string directly, you instantiate a wrapper class and pass it as the `model` parameter to your `LlmAgent`.
+
+Common wrappers include:
+- `LiteLlm` – OpenAI, Anthropic, Azure OpenAI, Cohere, Mistral, etc.
+- `ApigeeLlm` – Models accessed through Apigee gateways
+
+---
+
+### OpenAI / Anthropic (LiteLLM)
+
+#### Environment Variables
+
+```bash
+OPENAI_API_KEY="YOUR_OPENAI_API_KEY"
+ANTHROPIC_API_KEY="YOUR_ANTHROPIC_API_KEY"
+```
+
 
 ### Run your agent
 You can run your ADK agent with an interactive command-line interface using the adk run command or the ADK web user interface provided by the ADK using the adk web command. Both these options allow you to test and interact with your agent.
